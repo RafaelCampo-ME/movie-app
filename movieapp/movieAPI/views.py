@@ -15,6 +15,17 @@ class PostMovie(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = MovieSerializer
 
 class createMovie(ModelViewSet):
+    """_summary_
+
+    Args:
+        ModelViewSet (_type_): _description_
+
+    Returns:
+        _type_: _description_
+        https://ilovedjango.com/django/rest-api-framework/views/tips/sub/modelviewset-django-rest-framework/
+        https://www.django-rest-framework.org/api-guide/viewsets/#modelviewset
+        https://ilovedjango.com/django/rest-api-framework/create-data-using-api/
+    """
     queryset = Movie.objects.none()
     serializer_class = MovieSerializer
     http_method_names = ['post',]
